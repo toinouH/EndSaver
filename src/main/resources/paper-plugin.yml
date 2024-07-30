@@ -1,0 +1,5 @@
+name: EndSaver
+version: '1.0-SNAPSHOT'
+main: fr.toinouh.endSaver.EndSaver
+api-version: '1.21'
+description: Save the end when the dragon is killed
