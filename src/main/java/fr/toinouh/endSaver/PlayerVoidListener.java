@@ -44,13 +44,13 @@ public class PlayerVoidListener implements Listener {
                     player.setVelocity(newVelocity);            // apply the falling speed
 
                     player.sendMessage("You were falling into the void and have been teleported back to the overworld.");
-                    System.out.println(player.getName() + " was teleported from the End to the Overworld.");    // Log the teleportation to the console
+                    plugin.getLogger().info(player.getName() + " was teleported from the End to the Overworld.");    // Log the teleportation to the console
                     }).exceptionally(ex -> {
-                        plugin.getLogger().warning("Failed to teleport player " + player.getName() + " to the overworld: " + ex.getMessage());
+                        plugin.getLogger().severe("Failed to teleport player " + player.getName() + " to the overworld: " + ex.getMessage());
                         return null;
                     });
             } else {
-                plugin.getLogger().warning("Overworld not found. Player could not be teleported.");
+                plugin.getLogger().severe("Overworld not found. Player could not be teleported.");
             }
         }
     }
