@@ -37,7 +37,7 @@ public class PlayerVoidListener implements Listener {
                 player.teleportAsync(teleportLocation).thenRun(() -> {  // Teleport the player asynchronously because sync chunk load is pain for the server
 
                     Vector newVelocity = player.getVelocity();  // A new vector to store the new velocity
-                    newVelocity.setY(3.98);                     //https://www.reddit.com/r/Minecraft/comments/as2rz3/blockssecond_a_player_travels_when_falling_please/
+                    newVelocity.setY(3.98);                     // https://www.reddit.com/r/Minecraft/comments/as2rz3/blockssecond_a_player_travels_when_falling_please/
                     newVelocity.setX(playerX);                  // retrieve the player's X speed
                     newVelocity.setZ(playerZ);                  // retrieve the player's Z speed
 
@@ -60,7 +60,7 @@ public class PlayerVoidListener implements Listener {
         if (event.getEntity() instanceof Player player) {
             World world = player.getWorld();
 
-            if (world.getEnvironment() == World.Environment.THE_END && player.getLocation().getY() < -60 && event.getCause() == EntityDamageEvent.DamageCause.VOID) {
+            if (world.getEnvironment() == World.Environment.THE_END && event.getCause() == EntityDamageEvent.DamageCause.VOID) {
                 event.setCancelled(true);
             }
         }
