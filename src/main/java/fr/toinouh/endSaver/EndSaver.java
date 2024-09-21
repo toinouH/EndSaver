@@ -2,7 +2,7 @@ package fr.toinouh.endSaver;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class EndSaver extends JavaPlugin {
+public class EndSaver extends JavaPlugin {  // Can't be final with MockBukkit
 
     @Override
     public void onEnable() {

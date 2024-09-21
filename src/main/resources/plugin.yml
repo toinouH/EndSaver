@@ -1,6 +1,6 @@
 name: EndSaver
-version: '1.0-SNAPSHOT'
+version: 1.0-SNAPSHOT
 main: fr.toinouh.endSaver.EndSaver
-api-version: '1.21'
+api-version: 1.21.1
 description: Saves you from dying from the void in the end and sends you back to the Overworld
 authors: [ toinouH ]
